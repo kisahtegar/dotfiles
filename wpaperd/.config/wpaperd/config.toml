@@ -1,0 +1,7 @@
+[any]
+path = "~/dotfiles/wpaperd/wallpapers"
+duration = "15m"
+sorting = "random"
+
+[default.transition.directional-wipe]
+direction = [1.0, 0.0]
