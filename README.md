@@ -1,22 +1,47 @@
-# Hyprland Dotfiles
+# Dotfiles
 
-Personal Linux desktop setup using:
+Personal Linux development environment setup using:
 
 * Hyprland
 * Waybar
-* Rofi
-* Ghostty
 * Neovim
-* tmuxV
+* tmux
 * Zsh
-* GNU Stow
+* Ghostty
+* Rofi
+* wpaperd
+
+Managed using GNU Stow.
 
 ---
 
-## Screenshots
+## Preview
 
-<img src="./previews/desktop-1.png" width="100%">
-<img src="./previews/desktop-2.png" width="100%">
+### Desktop
+
+![Desktop Preview](./previews/desktop.png)
+
+### Terminal + Neovim
+
+![Terminal Preview](./previews/vim-tmux.png)
+
+### Monitoring Tools
+
+![Monitoring Preview](./previews/monitoring.png)
+
+---
+
+## Features
+
+* Wayland-based desktop environment
+* Modular dotfiles structure
+* GNU Stow managed configuration
+* Neovim development workflow
+* tmux session persistence
+* Dynamic Waybar modules
+* Rofi launcher integration
+* Wallpaper rotation with wpaperd
+* Shared terminal color ecosystem
 
 ---
 
@@ -24,63 +49,75 @@ Personal Linux desktop setup using:
 
 ```text
 dotfiles/
-├── ghostty
-├── hypr
-├── nvim
-├── rofi
-├── tmux
-├── waybar
-├── wezterm
-├── wpaperd
-└── zsh
+├── ghostty/
+├── hypr/
+├── nvim/
+├── rofi/
+├── tmux/
+├── waybar/
+├── wezterm/
+├── wpaperd/
+└── zsh/
 ```
+
+---
+
+## Modules
+
+| Module                         | Description                               |
+| ------------------------------ | ----------------------------------------- |
+| [ghostty](./ghostty/README.md) | GPU-accelerated terminal emulator         |
+| [hypr](./hypr/README.md)       | Hyprland Wayland compositor configuration |
+| [nvim](./nvim/README.md)       | Lua-based Neovim setup                    |
+| [rofi](./rofi/README.md)       | Application launcher                      |
+| [tmux](./tmux/README.md)       | Terminal multiplexer                      |
+| [waybar](./waybar/README.md)   | Wayland status bar                        |
+| [wezterm](./wezterm/README.md) | Alternative terminal emulator             |
+| [wpaperd](./wpaperd/README.md) | Wallpaper daemon                          |
+| [zsh](./zsh/README.md)         | Shell configuration                       |
 
 ---
 
 ## Requirements
 
-### Packages
-
-Install required packages:
+### Core Packages
 
 ```bash
 sudo pacman -S \
-hyprland \
-waybar \
-rofi \
-ghostty \
-wezterm \
-zsh \
-tmux \
-neovim \
-wpaperd \
-eza \
-zoxide \
-git \
-stow
+    hyprland \
+    waybar \
+    rofi-wayland \
+    ghostty \
+    wezterm \
+    neovim \
+    tmux \
+    zsh \
+    wpaperd
 ```
 
 ---
 
 ## Fonts
 
-Required fonts:
+Required Nerd Fonts:
 
 * JetBrainsMono Nerd Font
-* Meslo Nerd Font
+* MesloLGS Nerd Font
 
 ---
 
-## Clone Repository
+## GNU Stow Setup
+
+Clone repository:
 
 ```bash
-git clone <your-repo-url> ~/dotfiles
+git clone https://github.com/yourusername/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 ```
 
 ---
 
-## GNU Stow Setup
+### Stow Configurations
 
 ```bash
 stow zsh
@@ -88,37 +125,10 @@ stow hypr
 stow waybar
 stow rofi
 stow ghostty
+stow wezterm
 stow tmux
 stow nvim
 stow wpaperd
-```
-
----
-
-## tmux Plugins
-
-Default key using CTRL+A ...
-
-Install TPM:
-
-```bash
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-```
-
-Inside tmux:
-
-```text
-CTRL + A + SHIFT + I
-```
-
----
-
-## Wallpaper
-
-Wallpapers stored in:
-
-```text
-~/Pictures/Wallpapers
 ```
 
 ---
@@ -127,10 +137,20 @@ Wallpapers stored in:
 
 ### Wayland
 
-Some applications may require:
+This setup is designed primarily for:
 
-```bash
-env WAYLAND_DISPLAY=wayland-1
-```
+* Hyprland
+* Wayland workflow
+* keyboard-driven navigation
 
-depending on compositor session setup.
+---
+
+## Related Tools
+
+* Hyprland
+* Waybar
+* Rofi
+* Neovim
+* tmux
+* lazy.nvim
+* Powerlevel10k
